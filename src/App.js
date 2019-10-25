@@ -1,25 +1,24 @@
 import React from 'react';
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Movies from './Movies';
+import Details from './Details/Details';
+import NotFound from './NotFound';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          <h1>Welcome to Kodflix</h1>          
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <h1>Welcome to Kodflix!</h1>
+        <br />
+        <Switch>
+          <Route exact path='/' component={Movies} />
+          <Route exact path='/not-found' component={NotFound} /> 
+          <Route exact path='/:moviesId' component={Details} />
+        </Switch>
+
+      </div>
+    </Router>
   );
 }
 
