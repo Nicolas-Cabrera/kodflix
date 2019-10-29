@@ -1,5 +1,4 @@
 import React from 'react';
-import TvItem from './Stack';
 import Stack from './Stack';
 import getMovies from './getMovies';
 
@@ -15,7 +14,8 @@ export default function Movies() {
                     key={stack.id}
                     id={stack.id} 
                     name={stack.name} 
-                    logo={stack.logo} />
+                    logo={stack.logo}
+                    year={stack.year}/>
                 ))
             }
             </div>

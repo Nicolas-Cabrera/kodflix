@@ -2,7 +2,7 @@
   text-align: center;
 }
 img{
-  width: 50%;
+  width: 100%;
 }
 .container{
    /*display: flex;
@@ -23,15 +23,34 @@ img{
   transition: bottom ease 1s;
   position: absolute;
   bottom: -100px;
-  background-color: green;
-  opacity: .7;
+  color: black;
+  background-color: white;
   left: 0;
   width: 100%;
+}
+
+.overlaydown{
+  transition: bottom ease 1s;
+  position: absolute;
+  bottom: 400px;
+  width: 95%;
+  color: black;
+  background-color: white;
+  opacity: 0.7;
+}
+
+.item:hover .overlaydown{
+  display: block;
+  bottom: 300px;
 }
 
 .item:hover .overlay{
   display: block;
   bottom: 0;
+}
+
+.icons{
+  width: 15%;
 }
 /*@media only screen and (max-width: 600px){
   .container{

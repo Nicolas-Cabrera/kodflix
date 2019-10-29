@@ -40,14 +40,17 @@ export default class Details extends Component {
 
         } else {
             return (
-                <div className='Details'>
+                <div className='layout'>
                     <h1>{this.state.movies.name}</h1>
-                    <div class='container image'>
-                        <div>{this.state.movies.details}</div>
-                        <img className='image'
-                            src={this.state.movies.logo}
-                            alt={this.state.movies.name} />
+                    <div className='details'>
+                        <div class='container image'>                            
+                            <img className='image'
+                                src={this.state.movies.logo}
+                                alt={this.state.movies.name} />
+                                <div className='txt'> {this.state.movies.details}</div>
+                        </div>
                     </div>
+
                     <Link to='/'>Back to home page</Link>
                 </div>
             );
